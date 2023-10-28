@@ -9,5 +9,4 @@ public class Pro2115SnFeBeesApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(Pro2115SnFeBeesApplication.class, args);
 	}
-
 }
