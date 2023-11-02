@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{/views/user/layout/index :: dynamic(~{ :: main})}">
+<main>
+    <div class="container-fluid mt-3">
+      <div class="row">
+        <div class="col-3 overflow-y-auto">
+          <ul class="nav nav-pills d-flex flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6">
+          <h1>Posts</h1>
+          <ul>
+              <li th:each="post : ${posts}">
+                  <h2 th:text="${post.title}"></h2>
+                  <p th:text="${post.content}"></p>
+              </li>
+              <li>
+                <h2>Test</h2>
+              </li>
+          </ul>
+        </div>
+        <div class="col 3">Control</div>
+      </div>
+    </div>
+</main>
+</html>
