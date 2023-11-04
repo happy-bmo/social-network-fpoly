@@ -1,18 +1,31 @@
-<header class="fixed md:flex w-full bg-white shadow-lg p-3 flex justify-between items-center ">
-  <nav class="flex justify-between items-center w-[92%] mx-auto">
+<header class="fixed md:flex w-full bg-white h-14 flex justify-between items-center border">
+  <nav class="flex justify-between items-center w-[92%] mx-auto ">
     <div>
       <img class="w-12 rounded-full" src="/assets/dist/img/logo.jpg" alt="Logo">
     </div>
     <div class="nav-links md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
       <ul class="flex md:flex-row flex-col items-center md:items-center md:gap-[4vw] gap-8">
-        <li><a class="hover:text-orange-400" href="#">Trang chủ</a></li>
-        <li><a class="hover:text-orange-400" href="#">Bài viết</a></li>
-        <li><a class="hover:text-orange-400" href="#">Liên hệ</a></li>
+        <li>
+          <a class="hover:text-orange-400" href="#">Trang chủ</a>
+        </li>
+        <li>
+          <a class="hover:text-orange-400" href="#">Bài viết</a>
+        </li>
+        <li>
+          <a class="hover:text-orange-400" href="#">Liên hệ</a>
+        </li>
       </ul>
     </div>
     <div class="flex items-center gap-6">
       <button type="button" class="px-3 py-2 rounded-full transition bg-orange-500 hover:bg-orange-600 duration-300">
-        Sign in
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15m0-3l-3-3m0 0l-3 3m3-3V15" />
+        </svg>        
+      </button>
+      <button type="button" class="px-3 py-2 rounded-full transition bg-orange-500 hover:bg-orange-600 duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
       </button>
       <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
     </div>
