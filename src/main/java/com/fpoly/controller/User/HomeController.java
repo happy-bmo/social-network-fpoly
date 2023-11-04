@@ -9,4 +9,14 @@ public class HomeController {
     public String index() {
         return "redirect:/newfeed";
     }
+
+    @RequestMapping("/login")
+    public String login() {
+        return "views/user/auth/login";
+    }
+
+    @RequestMapping("/registry")
+    public String registry() {
+        return "views/user/auth/registry";
+    }
 }
