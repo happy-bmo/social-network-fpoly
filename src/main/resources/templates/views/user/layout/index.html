@@ -12,7 +12,9 @@
 </head>
 <body class="font-[Roboto] h-96">
     <div th:replace="~{/views/user/layout/navbar}"></div>
+    <div th:replace="~{/views/user/layout/left-aside}"></div>
     <div th:replace="${main}"></div>
+    <div th:replace="~{/views/user/layout/right-aside}"></div>
 </body>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
