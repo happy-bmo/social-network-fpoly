@@ -19,4 +19,14 @@ public class HomeController {
     public String registry() {
         return "views/user/auth/registry";
     }
+
+    @RequestMapping("/account")
+    public String account() {
+        return "views/user/profile/profile";
+    }
+
+    @RequestMapping("/mypost")
+    public String myPost() {
+        return "views/user/profile/mypost";
+    }
 }

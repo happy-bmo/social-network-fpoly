@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="bg-[#EFF0F1]">
+    <div th:replace="~{/views/user/layout/navbar}"></div>
+    <section class="container flex mx-auto px-14 pt-14">
+        <div class="flex flex-row w-[1155px] h-[150px] rounded-full bg-gray-200 mt-4 shadow-md border bg-white p-[15px]">
+            <div class="basis-1/8">
+                <img class="w-[120px] rounded-full border " src="/assets/dist/img/avatar.png" alt="">
+            </div>
+            <div class="flex items-center basis-1/2">
+                <span class="font-bold text-2xl self-center mx-4">Minh Duy</span>
+            </div>
+            <div class="flex justify-end items-center basis-1/3">
+                <button class="bg-orange-500 p-3 rounded-full hover:bg-orange-600 font-bold">Xem bài viết </button>
+            </div>
+        </div>
+        
+    </section>
+    <section class="container flex justify-center mx-auto mt-4">
+      
+        <div class="bg-white w-full border shadow mx-16 rounded-md">
+            <p class="p-4 font-bold text-lg">
+              Thông tin cá nhân
+            </p>
+            <div class="p-2">
+                <form class="grid grid-cols-2" action="">
+                  <div class="mb-3 mx-3">
+                    <span class="mb-2 text-[#606770]" for="lastname">Họ</span><br>
+                    <input class="border bg-white rounded-full w-full" type="text" name="lastname" id="lastname" placeholder="" value="Minh">
+                </div>
+                <div class="mb-3 mx-3">
+                    <span class="mb-2 text-[#606770]" for="firstname">Tên</span><br>
+                    <input class="border bg-white rounded-full w-full" type="text" name="firstname" id="firstname" placeholder="" value="Duy">
+                </div>
+                <div class="mb-3 mx-3">
+                    <span class="mb-2 text-[#606770]" for="email">Email</span><br>
+                    <input class="border bg-white rounded-full w-full" type="email" name="email" id="email" placeholder="" value="duy9803@gmail.com">
+                </div>
+                <div class="mb-3 mx-3">
+                    <span class="mb-2 text-[#606770]" for="phone">Số điện thoại</span><br>
+                    <input class="border bg-white rounded-full w-full" type="text" name="phone" id="phone" placeholder="" value="0778112175">
+                </div>
+                <div class="mb-3 mx-3">
+                    <span class="mb-2 text-[#606770]" for="phone">Giới tính</span><br>
+                    <input id="gender" type="radio" value="true" name="gender"  class="w-4 h-4 text-orange-500 bg-orange-100 border-gray-300 focus:ring-orange-300 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" checked>
+                    <label for="gender" class="ml-2 text-sm font-medium text-[#606770]">Nam</label>
+                    <input id="gender" type="radio" value="false" name="gender" class="w-4 h-4 text-orange-500 bg-orange-100 border-gray-300 focus:ring-orange-300 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="gender" class="ml-2 text-sm font-medium text-[#606770]">Nữ</label>
+                </div>
+                <div class="mb-3 mx-3">
+                    <span class="mb-2 text-[#606770]" for="date">Ngày/Tháng/Năm sinh</span><br>
+                    <input class="border bg-white rounded-full w-full text-[#606770]" type="date" name="date" id="date" placeholder="" value="2003-08-09">
+                </div>
+                <div class="mx-2">
+                </div>
+                <div class="pb-6">
+                  <button class="rounded-full hover:bg-orange-600 border border-orange-500 bg-orange-500 py-2 mt-4 w-full font-bold text-white">Đăng ký</button>
+                </div>
+              </form>
+                <!-- <ul class="mt-3">
+                    <li class="mr-2 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 inline">
+                            <path d="M6.75.98l-.884.883a1.25 1.25 0 101.768 0L6.75.98zM13.25.98l-.884.883a1.25 1.25 0 101.768 0L13.25.98zM10 .98l.884.883a1.25 1.25 0 11-1.768 0L10 .98zM7.5 5.75a.75.75 0 00-1.5 0v.464c-1.179.305-2 1.39-2 2.622v.094c.1-.02.202-.038.306-.051A42.869 42.869 0 0110 8.5c1.93 0 3.83.129 5.694.379.104.013.206.03.306.051v-.094c0-1.232-.821-2.317-2-2.622V5.75a.75.75 0 00-1.5 0v.318a45.645 45.645 0 00-1.75-.062V5.75a.75.75 0 00-1.5 0v.256c-.586.01-1.17.03-1.75.062V5.75zM4.505 10.365A41.377 41.377 0 0110 10c1.863 0 3.697.124 5.495.365C16.967 10.562 18 11.838 18 13.28v.693a3.72 3.72 0 01-1.665-.393 5.222 5.222 0 00-4.67 0 3.722 3.722 0 01-3.33 0 5.222 5.222 0 00-4.67 0A3.72 3.72 0 012 13.972v-.693c0-1.441 1.033-2.716 2.505-2.914zM15.665 14.921a5.22 5.22 0 002.335.551V16.5a1.5 1.5 0 01-1.5 1.5h-13A1.5 1.5 0 012 16.5v-1.028c.8 0 1.6-.183 2.335-.551a3.722 3.722 0 013.33 0c1.47.735 3.2.735 4.67 0a3.722 3.722 0 013.33 0z" />
+                        </svg>                                
+                        <span>09/08/2003</span>
+                    </li>
+                    <li class="mr-2 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 inline">
+                            <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z" clip-rule="evenodd" />
+                        </svg>                          
+                        <span>0778112175</span>
+                    </li>
+                    <li class="mr-2 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 inline">
+                            <path d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z" />
+                            <path d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z" />
+                        </svg>              
+                        <span>duy9803@gmail.com</span>
+                    </li>
+                    <li class="mr-2 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 inline">
+                            <path d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z" />
+                        </svg>
+                        <span>Nam</span>
+                    </li>
+                </ul> -->
+            </div>
+        </div>
+    </section>
+</body>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</html>
