@@ -20,8 +20,8 @@ public class HomeController {
         return "/views/user/auth/registry";
     }
 
-    @RequestMapping("/account")
-    public String account() {
+    @RequestMapping("/profile")
+    public String profile() {
         return "views/user/profile/profile";
     }
 
