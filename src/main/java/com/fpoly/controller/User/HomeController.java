@@ -12,12 +12,12 @@ public class HomeController {
 
     @RequestMapping("/login")
     public String login() {
-        return "views/user/auth/login";
+        return "/views/user/auth/login";
     }
 
     @RequestMapping("/registry")
     public String registry() {
-        return "views/user/auth/registry";
+        return "/views/user/auth/registry";
     }
 
     @RequestMapping("/account")
