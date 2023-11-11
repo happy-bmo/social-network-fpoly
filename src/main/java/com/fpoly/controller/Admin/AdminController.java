@@ -9,4 +9,14 @@ public class AdminController {
 	public String admin() {
 		return "redirect:/assets/admin/index.html";
 	}
+
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class AdminController {
+    @GetMapping("/admin")
+    public String index() {
+        return "views/admin/index";
+    }
+
 }

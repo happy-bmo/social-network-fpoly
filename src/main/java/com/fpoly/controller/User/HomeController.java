@@ -8,5 +8,6 @@ public class HomeController {
     @GetMapping("/") 
     public String index() {
         return "index";
+        return "views/user/index";
     }
 }
